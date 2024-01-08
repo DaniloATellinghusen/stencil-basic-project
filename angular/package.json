@@ -1,0 +1,63 @@
+{
+  "name": "@my-stencil-project/my-stencil-project-angular",
+  "version": "1.0.0-15",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build.ng",
+    "build.local": "rm -rf node_modules || true && rm package-lock.json || true && npm i && npm run build && npm pack",
+    "build.ng": "npm run build.es2015 && npm run build.es5",
+    "build.es2015": "ngc -p tsconfig.json && rollup --config ./scripts/rollup.config.js",
+    "build.es5": "ngc -p tsconfig.legacy.json && rollup --config ./scripts/rollup.config.legacy.js",
+    "prerelease": "npm run validate && np prerelease --yolo --any-branch --tag next",
+    "tsc": "tsc -p ."
+  },
+  "module": "dist/es5/fesm5.js",
+  "main": "dist/es5/fesm5.js",
+  "es2015": "dist/es2015/fesm2015.js",
+  "types": "dist/es5/core.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@my-stencil-project/my-stencil-project": "./my-stencil-project-my-stencil-project-1.0.0-24.tgz",
+    "tslib": "2.3.1"
+  },
+  "bundledDependencies": [
+    "@my-stencil-project/my-stencil-project"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=8.2.7",
+    "@angular/forms": ">=8.2.7",
+    "@angular/router": ">=8.2.7",
+    "rxjs": ">=6.2.0",
+    "zone.js": ">=0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "^13.0.3",
+    "@angular-devkit/schematics": "^13.0.3",
+    "@angular/common": "^13.0.2",
+    "@angular/compiler": "^13.0.2",
+    "@angular/compiler-cli": "^13.0.2",
+    "@angular/core": "^13.0.2",
+    "@angular/forms": "^13.0.2",
+    "@angular/router": "^13.0.2",
+    "@types/node": "12.12.5",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "rollup": "~1.17.0",
+    "rollup-plugin-node-resolve": "~5.2.0",
+    "rxjs": "^7.4.0",
+    "typescript": "~4.4.3",
+    "zone.js": "^0.11.4"
+  },
+  "schematics": "./schematics/collection.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "@my-stencil-project/my-stencil-project"
+    ]
+  }
+}

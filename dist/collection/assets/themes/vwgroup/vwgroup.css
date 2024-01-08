@@ -1,0 +1,373 @@
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-Regular.woff2") format("woff2"), url("./fonts/TheGroupTEXT-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-RegularItalic.woff2") format("woff2"), url("./fonts/TheGroupTEXT-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-Medium.woff2") format("woff2"), url("./fonts/TheGroupTEXT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-Medium.woff2") format("woff2"), url("./fonts/TheGroupTEXT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-Bold.woff2") format("woff2"), url("./fonts/TheGroupTEXT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupTEXT";
+  src: url("./fonts/TheGroupTEXT-BoldItalic.woff2") format("woff2"), url("./fonts/TheGroupTEXT-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupHEAD";
+  src: url("./fonts/TheGroupHEAD-Light.woff2") format("woff2"), url("./fonts/TheGroupHEAD-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheGroupHEAD";
+  src: url("./fonts/TheGroupHEAD-LightItalic.woff2") format("woff2"), url("./fonts/TheGroupHEAD-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+:root {
+  --groupui-vwgroup-the-group-text: "TheGroupTEXT", sans-serif;
+  --groupui-vwgroup-the-group-head: "TheGroupHEAD", sans-serif;
+  --groupui-vwgroup-line-height: 1.5;
+  --groupui-vwgroup-border-radius-medium: 8px;
+  --groupui-vwgroup-border-radius-round: 999px;
+  --groupui-vwgroup-border-radius-small: 4px;
+  --groupui-vwgroup-border-width: 0.0625rem;
+  --groupui-vwgroup-border: 0.0625rem solid;
+  --groupui-vwgroup-letter-spacing: 0rem;
+  --groupui-vwgroup-letter-spacing-large: 0rem;
+  --groupui-spacing-1: 0.125rem;
+  --groupui-spacing-2: 0.25rem;
+  --groupui-spacing-3: 0.5rem;
+  --groupui-spacing-4: 0.75rem;
+  --groupui-spacing-5: 1rem;
+  --groupui-spacing-6: 1.25rem;
+  --groupui-spacing-7: 1.5rem;
+  --groupui-spacing-8: 2rem;
+  --groupui-spacing-9: 2.5rem;
+  --groupui-spacing-10: 3rem;
+  --groupui-spacing-11: 3.5rem;
+  --groupui-spacing-12: 4.5rem;
+  --groupui-spacing-13: 6rem;
+  --groupui-vwgroup-font-size-body-1: 16px;
+  --groupui-vwgroup-font-size-body-2: 14px;
+  --groupui-vwgroup-font-size-caption: 12px;
+  --groupui-vwgroup-font-size-label: 12px;
+  --groupui-spacing-flex-1: 0.125rem;
+  --groupui-spacing-flex-2: 0.25rem;
+  --groupui-spacing-flex-3: 0.5rem;
+  --groupui-spacing-flex-4: 0.75rem;
+  --groupui-spacing-flex-5: 1rem;
+  --groupui-spacing-flex-6: 1.25rem;
+  --groupui-spacing-flex-7: 1.5rem;
+  --groupui-spacing-flex-8: 2rem;
+  --groupui-spacing-flex-9: 2.5rem;
+  --groupui-spacing-flex-10: 3rem;
+  --groupui-spacing-flex-11: 3.5rem;
+  --groupui-spacing-flex-12: 4.5rem;
+  --groupui-spacing-flex-13: 6rem;
+  --groupui-vwgroup-color-pure-white: #FFFFFF;
+  --groupui-vwgroup-color-black: #000000;
+  --groupui-vwgroup-color-vivid-green-1000: #001F16;
+  --groupui-vwgroup-color-vivid-green-900: #00332D;
+  --groupui-vwgroup-color-vivid-green-800: #004942;
+  --groupui-vwgroup-color-vivid-green-700: #006058;
+  --groupui-vwgroup-color-vivid-green-600: #008075;
+  --groupui-vwgroup-color-vivid-green-500: #008c82;
+  --groupui-vwgroup-color-vivid-green-400: #37A99E;
+  --groupui-vwgroup-color-vivid-green-300: #55C2B6;
+  --groupui-vwgroup-color-vivid-green-200: #6FDBCF;
+  --groupui-vwgroup-color-vivid-green-100: #8AF5E8;
+  --groupui-vwgroup-color-deep-space-blue-1000: #00141F;
+  --groupui-vwgroup-color-deep-space-blue-900: #002733;
+  --groupui-vwgroup-color-deep-space-blue-800: #1B3E4A;
+  --groupui-vwgroup-color-deep-space-blue-700: #325360;
+  --groupui-vwgroup-color-deep-space-blue-600: #496A78;
+  --groupui-vwgroup-color-deep-space-blue-500: #608190;
+  --groupui-vwgroup-color-deep-space-blue-400: #7899A8;
+  --groupui-vwgroup-color-deep-space-blue-300: #90B2C1;
+  --groupui-vwgroup-color-deep-space-blue-200: #A9CCDC;
+  --groupui-vwgroup-color-deep-space-blue-100: #C3E6F6;
+  --groupui-vwgroup-color-electric-neon-1000: #0C2300;
+  --groupui-vwgroup-color-electric-neon-900: #143900;
+  --groupui-vwgroup-color-electric-neon-800: #105100;
+  --groupui-vwgroup-color-electric-neon-700: #216800;
+  --groupui-vwgroup-color-electric-neon-600: #3A8000;
+  --groupui-vwgroup-color-electric-neon-500: #559800;
+  --groupui-vwgroup-color-electric-neon-400: #70B100;
+  --groupui-vwgroup-color-electric-neon-300: #8BCA00;
+  --groupui-vwgroup-color-electric-neon-200: #A6E400;
+  --groupui-vwgroup-color-electric-neon-100: #C2FE06;
+  --groupui-vwgroup-color-grey-1000: #1b1e1f;
+  --groupui-vwgroup-color-grey-950: #282c2d;
+  --groupui-vwgroup-color-grey-900: #34393b;
+  --groupui-vwgroup-color-grey-800: #4c5356;
+  --groupui-vwgroup-color-grey-700: #636a6d;
+  --groupui-vwgroup-color-grey-600: #7a8084;
+  --groupui-vwgroup-color-grey-500: #91979c;
+  --groupui-vwgroup-color-grey-400: #a8adb3;
+  --groupui-vwgroup-color-grey-300: #cacdd2;
+  --groupui-vwgroup-color-grey-200: #dfe2e6;
+  --groupui-vwgroup-color-grey-100: #f0f1f2;
+  --groupui-vwgroup-color-coral-1000: #450203;
+  --groupui-vwgroup-color-coral-900: #680D0F;
+  --groupui-vwgroup-color-coral-800: #952D26;
+  --groupui-vwgroup-color-coral-700: #AD4238;
+  --groupui-vwgroup-color-coral-600: #C45246;
+  --groupui-vwgroup-color-coral-500: #D66151;
+  --groupui-vwgroup-color-coral-400: #E67364;
+  --groupui-vwgroup-color-coral-300: #F58272;
+  --groupui-vwgroup-color-coral-200: #FFA08E;
+  --groupui-vwgroup-color-coral-100: #FFC0AD;
+  --groupui-vwgroup-color-orange-1000: #430700;
+  --groupui-vwgroup-color-orange-900: #572000;
+  --groupui-vwgroup-color-orange-800: #6D3400;
+  --groupui-vwgroup-color-orange-700: #864900;
+  --groupui-vwgroup-color-orange-600: #AA6703;
+  --groupui-vwgroup-color-orange-500: #CD7F0A;
+  --groupui-vwgroup-color-orange-400: #F29B21;
+  --groupui-vwgroup-color-orange-300: #FAAA3C;
+  --groupui-vwgroup-color-orange-200: #FEBD4F;
+  --groupui-vwgroup-color-orange-100: #FFDE6F;
+  --groupui-vwgroup-color-beige-1000: #311800;
+  --groupui-vwgroup-color-beige-900: #462C0B;
+  --groupui-vwgroup-color-beige-800: #5D411F;
+  --groupui-vwgroup-color-beige-700: #755633;
+  --groupui-vwgroup-color-beige-600: #8D6C48;
+  --groupui-vwgroup-color-beige-500: #A6835E;
+  --groupui-vwgroup-color-beige-400: #C09B75;
+  --groupui-vwgroup-color-beige-300: #DAB48D;
+  --groupui-vwgroup-color-beige-200: #FAD2AA;
+  --groupui-vwgroup-color-beige-100: #FFEDC4;
+  --groupui-vwgroup-color-blue-1000: #001E3B;
+  --groupui-vwgroup-color-blue-900: #003352;
+  --groupui-vwgroup-color-blue-800: #04496A;
+  --groupui-vwgroup-color-blue-700: #255F82;
+  --groupui-vwgroup-color-blue-600: #40759A;
+  --groupui-vwgroup-color-blue-500: #598CB2;
+  --groupui-vwgroup-color-blue-400: #72A5CB;
+  --groupui-vwgroup-color-blue-300: #8CBEE6;
+  --groupui-vwgroup-color-blue-200: #A5D7FE;
+  --groupui-vwgroup-color-blue-100: #C1F3FF;
+  --groupui-vwgroup-color-violet-1000: #330030;
+  --groupui-vwgroup-color-violet-900: #4D0D48;
+  --groupui-vwgroup-color-violet-800: #64255D;
+  --groupui-vwgroup-color-violet-700: #7B3B73;
+  --groupui-vwgroup-color-violet-600: #93518A;
+  --groupui-vwgroup-color-violet-500: #AB67A2;
+  --groupui-vwgroup-color-violet-400: #C882BE;
+  --groupui-vwgroup-color-violet-300: #DD96D3;
+  --groupui-vwgroup-color-violet-200: #F7AEEC;
+  --groupui-vwgroup-color-violet-100: #FFCFFF;
+  --groupui-vwgroup-color-lavender-1000: #1E152E;
+  --groupui-vwgroup-color-lavender-900: #332843;
+  --groupui-vwgroup-color-lavender-800: #483D59;
+  --groupui-vwgroup-color-lavender-700: #5F5270;
+  --groupui-vwgroup-color-lavender-600: #766988;
+  --groupui-vwgroup-color-lavender-500: #8E81A1;
+  --groupui-vwgroup-color-lavender-400: #A799BA;
+  --groupui-vwgroup-color-lavender-300: #C1B2D4;
+  --groupui-vwgroup-color-lavender-200: #DCCDF0;
+  --groupui-vwgroup-color-lavender-100: #F7E8FF;
+  --groupui-vwgroup-color-system-green-1000: #004219;
+  --groupui-vwgroup-color-system-green-900: #005820;
+  --groupui-vwgroup-color-system-green-800: #006F23;
+  --groupui-vwgroup-color-system-green-700: #008724;
+  --groupui-vwgroup-color-system-green-600: #08A334;
+  --groupui-vwgroup-color-system-green-500: #42B85A;
+  --groupui-vwgroup-color-system-green-400: #6AC87A;
+  --groupui-vwgroup-color-system-green-300: #83D88E;
+  --groupui-vwgroup-color-system-green-200: #B4E4BA;
+  --groupui-vwgroup-color-system-green-100: #DBF0DE;
+  --groupui-vwgroup-color-system-orange-1000: #CC6900;
+  --groupui-vwgroup-color-system-orange-900: #E57700;
+  --groupui-vwgroup-color-system-orange-800: #FF8C05;
+  --groupui-vwgroup-color-system-orange-700: #FF9A24;
+  --groupui-vwgroup-color-system-orange-600: #FFA538;
+  --groupui-vwgroup-color-system-orange-500: #FDB453;
+  --groupui-vwgroup-color-system-orange-400: #FCC167;
+  --groupui-vwgroup-color-system-orange-300: #FBCD87;
+  --groupui-vwgroup-color-system-orange-200: #FADAA9;
+  --groupui-vwgroup-color-system-orange-100: #F9E6CB;
+  --groupui-vwgroup-color-system-red-1000: #970001;
+  --groupui-vwgroup-color-system-red-900: #B50116;
+  --groupui-vwgroup-color-system-red-800: #D01628;
+  --groupui-vwgroup-color-system-red-700: #E51F26;
+  --groupui-vwgroup-color-system-red-600: #F03D3E;
+  --groupui-vwgroup-color-system-red-500: #F2595A;
+  --groupui-vwgroup-color-system-red-400: #FF7A7A;
+  --groupui-vwgroup-color-system-red-300: #FF9E9E;
+  --groupui-vwgroup-color-system-red-200: #FFBDBD;
+  --groupui-vwgroup-color-system-red-100: #FFDBDB;
+  --groupui-vwgroup-elevation-level-1: 0 0 0 0.0625rem #dfe2e6;
+  --groupui-vwgroup-elevation-level-8: 0 0.125rem 0.5rem 0.0625rem rgba(0, 0, 0, 0.1);
+  --groupui-vwgroup-breakpoint-xs: 0;
+  --groupui-vwgroup-breakpoint-s: 320px;
+  --groupui-vwgroup-breakpoint-m: 560px;
+  --groupui-vwgroup-breakpoint-l: 960px;
+  --groupui-vwgroup-breakpoint-xl: 1280px;
+  --groupui-vwgroup-breakpoint-xxl: 1620px;
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-1: 0.25rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-2: 0.375rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-3: 0.75rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-4: 1rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-5: 1.25rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-6: 1.5rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-7: 2rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-8: 2.5rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-9: 3rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-10: 3.5rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-11: 4.5rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-12: 6rem;
+  }
+}
+@media (min-width: 960px) {
+  :root {
+    --groupui-spacing-flex-13: 7rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-1: 0.375rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-2: 0.5rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-3: 1rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-4: 1.25rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-5: 1.5rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-6: 2rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-7: 2.5rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-8: 3rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-9: 3.5rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-10: 4.5rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-11: 6rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-12: 7rem;
+  }
+}
+@media (min-width: 1620px) {
+  :root {
+    --groupui-spacing-flex-13: 8.5rem;
+  }
+}
+
+.overlay-open {
+  overflow: hidden;
+}

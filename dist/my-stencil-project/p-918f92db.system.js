@@ -1,0 +1,2 @@
+System.register(["./p-c93a0be4.system.js"],(function(e){"use strict";var t;return{setters:[function(e){t=e.c}],execute:function(){var r=function(){var e=function(t){var r=t.brand||t.getAttribute("brand");if(r){return r}else if(!t.parentElement){return"vwag"}else{return e(t.parentElement)}};t((function(t){return e(t)}))};var n=e("g",r)}}}));
+//# sourceMappingURL=p-918f92db.system.js.map

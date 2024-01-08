@@ -1,0 +1,12 @@
+@import './button.vwag.common';
+
+:host div {
+  color: white;
+  background: darkcyan;
+  border: 1px solid darkcyan;
+}
+
+:host a {
+  color: inherit;
+  border-color: inherit;
+}

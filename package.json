@@ -1,0 +1,59 @@
+{
+  "name": "@my-stencil-project/my-stencil-project",
+  "version": "1.0.0-26",
+  "description": "A web stencil test project",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/my-stencil-project/my-stencil-project.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "npm run generate-themes-css && stencil build --docs --es5",
+    "build.local": "npm version prerelease --git-tag-version false && npm run build && npm pack",
+    "build.to.angular": "bash ./buildToAngular.sh",
+    "start": "npm run && stencil build --dev --watch --serve",
+    "generate-themes-css": "npm run convert-scss-to-css && npm run copy-themes-assets",
+    "copy-themes-assets": "copyfiles src/global/themes/**/fonts/iconfont/* src/assets/themes/ -u 3 && copyfiles src/global/themes/**/fonts/* src/assets/themes/ -u 3",
+    "convert-scss-to-css": "sass src/global/themes:src/assets/themes --no-source-map"
+  },
+  "devDependencies": {
+    "@angular/cli": "^16.2.1",
+    "@babel/core": "^7.22.1",
+    "@mdx-js/react": "^1.6.22",
+    "@playwright/test": "^1.39.0",
+    "@stencil/angular-output-target": "^0.7.1",
+    "@stencil/eslint-plugin": "0.4.0",
+    "@stencil/react-output-target": "^0.5.3",
+    "@stencil/sass": "1.5.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^20.8.7",
+    "@types/puppeteer": "^5.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "axios": "^0.24.0",
+    "babel-loader": "^8.2.3",
+    "copyfiles": "^2.4.1",
+    "eslint": "^7.32.0",
+    "lit-html": "^1.4.1",
+    "mutation-observer": "^1.0.3",
+    "puppeteer": "^13.7.0",
+    "replace": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.4",
+    "showdown": "^2.1.0",
+    "tree-kill": "1.2.2",
+    "typescript": "4.4.4",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/core": "^3.3.1"
+  }
+}

@@ -1,0 +1,6 @@
+@function calcLabelTransformY($lineHeight, $labelFontSize, $labelMarginBottom, $inputFontSize, $inputPaddingTop) {
+  $labelOffset: $lineHeight * division($labelFontSize, 2) + $labelMarginBottom;
+  $halfInputHeight: $lineHeight * division($inputFontSize, 2) + $inputPaddingTop;
+  @return ($labelOffset + $halfInputHeight) * 1rem;
+}
+

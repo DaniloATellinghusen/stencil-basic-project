@@ -1,0 +1,33 @@
+@import './input.vwag.common';
+
+:host {
+  ::slotted([slot='label']) {
+    color: gray;
+  }
+
+  input {
+    height: 2rem;
+    font-size: 1rem;
+    background: white;
+    border: 1px solid gray;
+    color: darkblue;
+
+    &::placeholder {
+      color: gray;
+    }
+  }
+
+  ::slotted([slot='description']),
+  #typing-info {
+    color: gray;
+  }
+}
+
+:host(:not([disabled=''])) {
+  input {
+    &:hover,
+    &:focus {
+      border-color: darkblue;
+    }
+  }
+}

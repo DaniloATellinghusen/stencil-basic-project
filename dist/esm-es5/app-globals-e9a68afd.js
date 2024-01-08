@@ -1,0 +1,2 @@
+import{c as setMode}from"./index-403d8268.js";var appGlobalScript=function(){var r=function(t){var e=t.brand||t.getAttribute("brand");if(e){return e}else if(!t.parentElement){return"vwag"}else{return r(t.parentElement)}};setMode((function(t){return r(t)}))};var globalScripts=appGlobalScript;export{globalScripts as g};
+//# sourceMappingURL=app-globals-e9a68afd.js.map

@@ -1,0 +1,41 @@
+:host div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 6px;
+}
+
+:host {
+  display: inline-block;
+  font-size: toRem(16);
+  vertical-align: middle;
+  height: max-content;
+
+  ::slotted([slot='start']) {
+    padding-right: 4px;
+  }
+
+  ::slotted([slot='end']) {
+    padding-left: 4px;
+  }
+}
+
+:host(:focus-visible) {
+  outline: none;
+}
+
+:host a {
+  text-decoration: none;
+  background: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+:host(:focus) {
+  outline: none;
+}

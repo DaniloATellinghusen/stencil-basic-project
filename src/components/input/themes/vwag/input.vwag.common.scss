@@ -1,0 +1,73 @@
+@import '../input.common';
+
+:host {
+  line-height: 1.2rem;
+  letter-spacing: 0.1rem;
+  width: 100%;
+
+  #label {
+    margin-bottom: 0.2rem;
+  }
+
+  ::slotted([slot='label']) {
+    position: relative;
+    font-weight: bold;
+    font-size: toRem(14);
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s;
+    cursor: default;
+  }
+
+  div {
+    position: relative;
+  }
+
+  input {
+    position: relative;
+    line-height: 2.4px;
+    letter-spacing: 0.1rem;
+    outline: none;
+    display: flex;
+    resize: none;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    &.no-bottom-border-radius {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+  }
+
+  #description {
+    flex-basis: 100%;
+  }
+
+  #typing-info {
+    white-space: nowrap;
+  }
+
+  ::slotted([slot='description']), #typing-info {
+    display: flex;
+    align-items: center;
+    font-size: toRem(14);
+    cursor: default;
+  }
+
+}
+
+:host([disabled=""]) {
+  input {
+    cursor: not-allowed;
+    pointer-events: auto;
+    box-shadow: none;
+  }
+}
+
+:host {
+  #input-wrapper {
+    position: relative;
+  }
+}

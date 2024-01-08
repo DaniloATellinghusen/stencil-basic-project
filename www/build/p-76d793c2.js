@@ -1,0 +1,2 @@
+import{c as r}from"./p-8e5cb952.js";const e=()=>{const e=r=>{const s=r.brand||r.getAttribute("brand");if(s){return s}else if(!r.parentElement){return"vwag"}else{return e(r.parentElement)}};r((r=>e(r)))};const s=e;export{s as g};
+//# sourceMappingURL=p-76d793c2.js.map
