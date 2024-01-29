@@ -11,9 +11,10 @@ else
     testingIndexContent='';
 fi
 
+printf "### Clean Install Stencil Project ###"
 #clean install
-#rm -rf node_modules
-#npm install
+rm -rf node_modules
+npm install
 
 # Create local package
 npm run build.local;
@@ -27,6 +28,7 @@ cd angular || return;
 npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project"="./my-stencil-project-my-stencil-project-$pkgV.tgz"
 #clean install
+printf "### Clean & Build Angular Wrapper ###"
 rm -rf node_modules
 npm install
 npm run build.local;
@@ -38,16 +40,18 @@ cd ../AngularProjectDemo || return;
 
 npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project-angular"="./my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz"
-rm node_modules
+printf "### Clean & Build AngularProjectDemo ###"
+rm -rf node_modules
 npm install
-cd ..
 
 # Move angular package to Angular17ProjectDemo
-pkgNgV=$(npm version | grep "'@my-stencil-project/my-stencil-project-angular': " | cut -d "'" -f 4);
+#cd ..
+#pkgNgV=$(npm version | grep "'@my-stencil-project/my-stencil-project-angular': " | cut -d "'" -f 4);
 mv "my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz" ../Angular17ProjectDemo;
 cd ../Angular17ProjectDemo || return;
 
 npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project-angular"="./my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz"
-rm node_modules
+printf "### Clean & Build Angular17ProjectDemo ###"
+rm -rf node_modules
 npm install
