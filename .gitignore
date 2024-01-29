@@ -1,3 +1,10 @@
-./node_modules
-Angular17ProjectDemo/node_modules
-AngularProjectDemo/node_modules
+/node_modules/*
+/Angular17ProjectDemo/node_modules/*
+/AngularProjectDemo/node_modules/*
+/angular/dist/*
+/angular/node_modules/*
+
+*.tgz
+/angular/*.tgz
+/Angular17ProjectDemo/*.tgz
+/AngularProjectDemo/*.tgz

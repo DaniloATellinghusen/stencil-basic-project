@@ -11,6 +11,10 @@ else
     testingIndexContent='';
 fi
 
+#clean install
+#rm -rf node_modules
+#npm install
+
 # Create local package
 npm run build.local;
 
@@ -22,6 +26,8 @@ mv "my-stencil-project-my-stencil-project-$pkgV.tgz" angular;
 cd angular || return;
 npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project"="./my-stencil-project-my-stencil-project-$pkgV.tgz"
+#clean install
+rm -rf node_modules
 npm install
 npm run build.local;
 
@@ -32,4 +38,5 @@ cd ../AngularProjectDemo || return;
 
 npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project-angular"="./my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz"
+rm node_modules
 npm install
