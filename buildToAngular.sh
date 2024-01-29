@@ -40,3 +40,14 @@ npm version prerelease --git-tag-version false
 npm pkg set dependencies."@my-stencil-project/my-stencil-project-angular"="./my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz"
 rm node_modules
 npm install
+cd ..
+
+# Move angular package to Angular17ProjectDemo
+pkgNgV=$(npm version | grep "'@my-stencil-project/my-stencil-project-angular': " | cut -d "'" -f 4);
+mv "my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz" ../Angular17ProjectDemo;
+cd ../Angular17ProjectDemo || return;
+
+npm version prerelease --git-tag-version false
+npm pkg set dependencies."@my-stencil-project/my-stencil-project-angular"="./my-stencil-project-my-stencil-project-angular-$pkgNgV.tgz"
+rm node_modules
+npm install
