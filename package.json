@@ -1,6 +1,6 @@
 {
   "name": "@my-stencil-project/my-stencil-project",
-  "version": "1.0.0-47",
+  "version": "1.0.0-48",
   "description": "A web stencil test project",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",

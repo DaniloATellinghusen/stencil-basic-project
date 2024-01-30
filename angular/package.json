@@ -1,6 +1,6 @@
 {
   "name": "@my-stencil-project/my-stencil-project-angular",
-  "version": "1.0.0-29",
+  "version": "1.0.0-30",
   "description": "",
   "license": "MIT",
   "scripts": {
@@ -20,7 +20,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@my-stencil-project/my-stencil-project": "./my-stencil-project-my-stencil-project-1.0.0-47.tgz",
+    "@my-stencil-project/my-stencil-project": "./my-stencil-project-my-stencil-project-1.0.0-48.tgz",
     "tslib": "2.3.1"
   },
   "bundledDependencies": [

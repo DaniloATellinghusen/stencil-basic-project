@@ -1956,7 +1956,20 @@ const loadModule = (cmpMeta, hostRef, hmrVersionId) => {
     if (module) {
         return module[exportName];
     }
-    /*!__STENCIL_STATIC_IMPORT_SWITCH__*/
+    
+    if (!hmrVersionId || !BUILD.hotModuleReplacement) {
+      const processMod = importedModule => {
+        cmpModules.set(bundleId, importedModule);
+        return importedModule[exportName];
+      }
+      switch(bundleId) {
+        
+        case 'my-button_2.cjs':
+          return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(
+            /* webpackMode: "lazy" */
+            './my-button_2.cjs.entry.js')); }).then(processMod, consoleError);
+      }
+    }
     return Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespace(require(
     /* @vite-ignore */
     /* webpackInclude: /\.entry\.js$/ */
